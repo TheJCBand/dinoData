@@ -1,0 +1,5 @@
+"specimen_no","record_type","flags","occurrence_no","reid_no","collection_no","specimen_id","is_type","specimen_side","specimen_part","specimen_sex","n_measured","measurement_source","magnification","comments","identified_name","identified_rank","identified_no","difference","accepted_name","accepted_rank","accepted_no","max_ma","min_ma","reference_no"
+"55860","spm","N","","0","","BM R5829","","","femur","","1","table","","","UNKNOWN","species","54190","obsolete variant of","Hypsilophodon foxii","species","54190","","","32089"
+"55861","spm","N","","0","","BM R5830","","","femur","","1","table","","minimum width of shaft","UNKNOWN","species","54190","obsolete variant of","Hypsilophodon foxii","species","54190","","","32089"
+"86543","spm","","280867","13277","","BMNH R5829","","","femur","","1","table","","","Hypsilophodon foxii","species","54190","","Hypsilophodon foxii","species","54190","130","125.45","12770"
+"86544","spm","","280867","13277","","BMNH R5820","","","femur","","1","table","","","Hypsilophodon foxii","species","54190","","Hypsilophodon foxii","species","54190","130","125.45","12770"

@@ -1,0 +1,7 @@
+"specimen_no","record_type","flags","occurrence_no","reid_no","collection_no","specimen_id","is_type","specimen_side","specimen_part","specimen_sex","n_measured","measurement_source","magnification","comments","identified_name","identified_rank","identified_no","difference","accepted_name","accepted_rank","accepted_no","max_ma","min_ma","reference_no"
+"18659","spm","N","","0","","TMP 88.121.39","","","femur","","1","table","","","UNKNOWN","species","54556","obsolete variant of","Saurornitholestes langstoni","species","54556","","","34423"
+"18660","spm","N","","0","","TMP 88.121.39","","","tibia","","1","table","","","UNKNOWN","species","54556","obsolete variant of","Saurornitholestes langstoni","species","54556","","","34423"
+"18661","spm","N","","0","","MOR 666","","","tibia","","1","table","","","UNKNOWN","species","54556","obsolete variant of","Saurornitholestes langstoni","species","54556","","","34423"
+"18662","spm","N","","0","","MOR 666","","","fibula","","1","table","","","UNKNOWN","species","54556","obsolete variant of","Saurornitholestes langstoni","species","54556","","","34423"
+"80791","spm","","248061","0","","MOR 666","","","tibia","","1","table","","","Saurornitholestes langstoni","species","54556","","Saurornitholestes langstoni","species","54556","83.5","70.6","34423"
+"80792","spm","","248061","0","","MOR 666","","","fibula","","1","table","","","Saurornitholestes langstoni","species","54556","","Saurornitholestes langstoni","species","54556","83.5","70.6","34423"

@@ -1,0 +1,4 @@
+"specimen_no","record_type","flags","occurrence_no","reid_no","collection_no","specimen_id","is_type","specimen_side","specimen_part","specimen_sex","n_measured","measurement_source","magnification","comments","identified_name","identified_rank","identified_no","difference","accepted_name","accepted_rank","accepted_no","max_ma","min_ma","reference_no"
+"78672","spm","","662962","0","","","","","tibia","","1","","","","cf. Sarcosaurus woodi","species","57252","","Sarcosaurus woodi","species","57252","196.5","189.6","10404"
+"78673","spm","","662962","0","","","","","femur","","1","","","","cf. Sarcosaurus woodi","species","57252","","Sarcosaurus woodi","species","57252","196.5","189.6","10404"
+"78674","spm","","662963","0","","BMNH R4840/1","holotype","","femur","","1","","","","n. gen. Sarcosaurus n. sp. woodi","species","57252","","Sarcosaurus woodi","species","57252","196.5","189.6","10404"

@@ -1,0 +1,5 @@
+"specimen_no","record_type","flags","occurrence_no","reid_no","collection_no","specimen_id","is_type","specimen_side","specimen_part","specimen_sex","n_measured","measurement_source","magnification","comments","identified_name","identified_rank","identified_no","difference","accepted_name","accepted_rank","accepted_no","max_ma","min_ma","reference_no"
+"80807","spm","","297282","0","","MDE-D158","paratype","","humerus","","1","","","","n. gen. Variraptor n. sp. mechinorum","species","65136","","Variraptor mechinorum","species","65136","83.5","70.6","29887"
+"80808","spm","","297282","0","","MDE-D203","paratype","","femur","","1","","","","n. gen. Variraptor n. sp. mechinorum","species","65136","","Variraptor mechinorum","species","65136","83.5","70.6","29887"
+"80809","spm","N","","0","","CM-307","","","ulna","","1","","","","UNKNOWN","species","65136","obsolete variant of","Variraptor mechinorum","species","65136","","","29887"
+"80810","spm","N","","0","","MC-M187","","","femur","","1","","","","UNKNOWN","species","65136","obsolete variant of","Variraptor mechinorum","species","65136","","","29887"
