@@ -1,8 +1,0 @@
-"specimen_no","record_type","flags","occurrence_no","reid_no","collection_no","specimen_id","is_type","specimen_side","specimen_part","specimen_sex","n_measured","measurement_source","magnification","comments","identified_name","identified_rank","identified_no","difference","accepted_name","accepted_rank","accepted_no","max_ma","min_ma","reference_no"
-"18781","spm","","220099","0","","MOR 553-7.24.8.64","","","tibia","","1","text","","","Troodon formosus","species","54818","","Troodon formosus","species","54818","85.8","70.6","13758"
-"80834","spm","","367436","0","","CMN 12340","","","ulna","","1","","","","Stenonychosaurus inequalis","species","54467","subjective synonym of","Troodon formosus","species","54818","83.5","70.6","9232"
-"80835","spm","N","","0","","CMN 12433","","","ulna","","1","","","","UNKNOWN","species","54818","obsolete variant of","Troodon formosus","species","54818","","","9232"
-"80836","spm","N","","0","","CMN 199","","","tibia","","1","","","","UNKNOWN","species","54818","obsolete variant of","Troodon formosus","species","54818","","","9232"
-"80837","spm","N","","0","","MOR 430","","","femur","","1","","","juvenile","UNKNOWN","species","54818","obsolete variant of","Troodon formosus","species","54818","","","11751"
-"80838","spm","N","","0","","MOR 430","","","tibia","","1","","","juvenile","UNKNOWN","species","54818","obsolete variant of","Troodon formosus","species","54818","","","11751"
-"80839","spm","N","","0","","MOR 553-7.24.8.64","","","tibia","","1","text","","","UNKNOWN","species","54818","obsolete variant of","Troodon formosus","species","54818","","","13758"
