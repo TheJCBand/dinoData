@@ -38,8 +38,16 @@ def splitData(csvFile):
                 circumference = 0
             else:
                 circumference = row[8]
-            yString.append(row[3])
-            nextRow = [length, width, height, circumference]
+            if row[10] == '':
+                longitude = 0
+            else:
+                longitude = row[10]
+            if row[11] == '':
+                latitude = 0
+            else:
+                latitude = row[11]
+            yString.append(row[9])
+            nextRow = [length, width, height, circumference, longitude, latitude]
             XNum.append(nextRow)
             XString.append(row[1])
     

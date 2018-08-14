@@ -34,7 +34,7 @@ start = time.time()
 model.fit(
     X_train,
     y_train,
-    batch_size=10,
-    epochs=100,
+    batch_size=1,
+    epochs=1000,
     validation_data=(X_crossVal,y_crossVal))
 print('training time : ', time.time() - start)

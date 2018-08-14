@@ -15,7 +15,10 @@ def getData(dinosaurs):
     width = []
     height = []
     circumference = []
-    
+    genus = []
+    longitude = []
+    latitude = []
+
     csvHeader = ['Specimen_Number',
         'Specimen_Part',
         'Identified_Name',
@@ -24,7 +27,10 @@ def getData(dinosaurs):
         'Length',
         'Width',
         'Height',
-        'Circumference']
+        'Circumference',
+        'Genus',
+        'Longitude',
+        'Latitude']
     
     noRec = 'THIS REQUEST RETURNED NO RECORDS'
     serverError = ['<html><head><title>500 Server Error</title></head>']
@@ -38,11 +44,12 @@ def getData(dinosaurs):
     for species in dinosaurs:
         print(species)
         noData = False
-        url = '%s%s'%(baseUrl,species)
+        url = '%s%s%s'%(baseUrl,species,'&show=genus,coords')
         r = requests.get(url, allow_redirects=True)
-        open('dinoData/%s.csv'%(species), 'wb').write(r.content)
-    
-        with open('dinoData/%s.csv'%(species), 'r') as csvfile:
+        with open('data/%s.csv'%(species), 'wb') as csvfile:
+            csvfile.write(r.content)
+        
+        with open('data/%s.csv'%(species), 'r') as csvfile:
             csvFileReader = csv.reader(csvfile)
             # print(next(csvFileReader) == serverError)
             noData = next(csvFileReader) == serverError
@@ -50,7 +57,7 @@ def getData(dinosaurs):
             for checkRow in csvFileReader:
                 if noData == False:
                     noData = checkRow[0] == noRec
-        with open('dinoData/%s.csv'%(species), 'r') as csvfile:
+        with open('data/%s.csv'%(species), 'r') as csvfile:
             csvFileReader = csv.reader(csvfile)
             next(csvFileReader)
             if noData == False:
@@ -60,12 +67,15 @@ def getData(dinosaurs):
                     identifiedName.append(row[15])
                     acceptedName.append(row[19])
                     acceptedRank.append(row[20])
+                    genus.append(row[25])
+                    longitude.append(row[26])
+                    latitude.append(row[27])
     
     for specimen in specimenNo:
         specUrl = '%s%s'%(specIdUrl,specimen)
         specReq = requests.get(specUrl, allow_redirects=True)
-        open('dinoData/Specimen%s.csv'%(specimen), 'wb').write(specReq.content)
-        measurements = pd.read_csv('dinoData/Specimen%s.csv'%(specimen), usecols=['measurement','average'])
+        open('data/Specimen%s.csv'%(specimen), 'wb').write(specReq.content)
+        measurements = pd.read_csv('data/Specimen%s.csv'%(specimen), usecols=['measurement','average'])
         measLabels = measurements['measurement'].tolist()
         measVals = measurements['average'].tolist()
         if 'length' in measLabels:
@@ -100,8 +110,11 @@ def getData(dinosaurs):
         csvHeader[5]: length,
         csvHeader[6]: height,
         csvHeader[7]: width,
-        csvHeader[8]: circumference}))
-    df.to_csv("dinoData/allData.csv", sep=',',index=False)
+        csvHeader[8]: circumference,
+        csvHeader[9]: genus,
+        csvHeader[10]: longitude,
+        csvHeader[11]: latitude}))
+    df.to_csv("data/allData.csv", sep=',',index=False)
     
     return
         
