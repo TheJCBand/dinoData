@@ -39,7 +39,7 @@ def splitData(csvFile):
             else:
                 circumference = row[8]
             if row[10] == '':
-                longitude = 0
+                longitude = 0 
             else:
                 longitude = row[10]
             if row[11] == '':

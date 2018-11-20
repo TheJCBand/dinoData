@@ -1,10 +1,12 @@
+#!/usr/bin/env python
+
 import requests
 import os
 import csv
 import pandas as pd
 from collections import OrderedDict
 
-def getData(dinosaurs):
+def getData(dinosaurs,threshold):
 
     specimenNo = []
     specimenPart = []
@@ -42,7 +44,6 @@ def getData(dinosaurs):
         os.makedirs('dinoData')
 
     for species in dinosaurs:
-        print(species)
         noData = False
         url = '%s%s%s'%(baseUrl,species,'&show=genus,coords')
         r = requests.get(url, allow_redirects=True)
@@ -51,7 +52,7 @@ def getData(dinosaurs):
         
         with open('data/%s.csv'%(species), 'r') as csvfile:
             csvFileReader = csv.reader(csvfile)
-            # print(next(csvFileReader) == serverError)
+        
             noData = next(csvFileReader) == serverError
             # next(csvFileReader)
             for checkRow in csvFileReader:
@@ -60,16 +61,24 @@ def getData(dinosaurs):
         with open('data/%s.csv'%(species), 'r') as csvfile:
             csvFileReader = csv.reader(csvfile)
             next(csvFileReader)
+            specimenCounter = []
             if noData == False:
                 for row in csvFileReader:
-                    specimenNo.append(row[0])
-                    specimenPart.append(row[9])
-                    identifiedName.append(row[15])
-                    acceptedName.append(row[19])
-                    acceptedRank.append(row[20])
-                    genus.append(row[25])
-                    longitude.append(row[26])
-                    latitude.append(row[27])
+                    specimenCounter.append(row[0])
+            nSpecimens = len(specimenCounter)
+            if nSpecimens >= threshold:
+                with open('data/%s.csv'%(species), 'r') as csvfile:
+                    csvFileReader2 = csv.reader(csvfile)
+                    next(csvFileReader2)
+                    for row2 in csvFileReader2:
+                        specimenNo.append(row2[0])
+                        specimenPart.append(row2[9])
+                        identifiedName.append(row2[15])
+                        acceptedName.append(row2[19])
+                        acceptedRank.append(row2[20])
+                        genus.append(row2[25])
+                        longitude.append(row2[26])
+                        latitude.append(row2[27])
     
     for specimen in specimenNo:
         specUrl = '%s%s'%(specIdUrl,specimen)
@@ -116,7 +125,11 @@ def getData(dinosaurs):
         csvHeader[11]: latitude}))
     df.to_csv("data/allData.csv", sep=',',index=False)
     
-    return
+    df = df[pd.isna(df['Genus']) == False]   
+    df = df[pd.isna(df['Longitude']) == False]   
+    df = df[pd.isna(df['Latitude']) == False]   
+    
+    return df
         
                 
                 
